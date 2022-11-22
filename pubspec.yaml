@@ -18,4 +18,21 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: RB
+      fonts:
+        - asset: assets/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf
+          weight: 600
+    - family: IBM
+      fonts:
+        - asset: assets/fonts/IBM_Plex_Sans_KR/IBMPlexSansKR-Regular.ttf
+          weight: 300
+        - asset: assets/fonts/IBM_Plex_Sans_KR/IBMPlexSansKR-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/IBM_Plex_Sans_KR/IBMPlexSansKR-Bold.ttf
+          weight: 800
 

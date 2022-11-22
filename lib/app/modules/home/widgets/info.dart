@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myweb/palette.dart';
 
 class Info extends StatelessWidget {
   const Info({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class Info extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: Color(0xFFe3dbd3),
+        color: primaryDark,
         child: Column(
           children: [
             Spacer(
@@ -16,14 +17,17 @@ class Info extends StatelessWidget {
             ),
             CircleAvatar(
               radius: 50,
-              backgroundColor: Color(0xFFdc143c),
+              backgroundImage: AssetImage('assets/images/codingcat.jpeg'),
             ),
             Spacer(),
             Text(
               "Yejoon Kim",
+              style: darkTextEng(),
             ),
+            Spacer(),
             Text(
-              "Seoul \n Flutter Dev",
+              "Cross Platform App Dev",
+              style: darkTextEng(),
             ),
             Spacer(
               flex: 2,

@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myweb/app/modules/home/widgets/info.dart';
 import 'package:get/get.dart';
-import 'package:myweb/app/pages/contactme.dart';
+import 'package:myweb/app/modules/home/widgets/contactme.dart';
+import 'package:myweb/palette.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: accentColor,
       child: SafeArea(
         child: Column(
           children: [
@@ -34,6 +36,7 @@ class _SideBarState extends State<SideBar> {
                 ],
               ),
             ),
+            ContactMe(),
           ],
         ),
       ),
