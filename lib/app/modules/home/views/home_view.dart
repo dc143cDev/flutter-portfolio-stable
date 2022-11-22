@@ -33,7 +33,7 @@ class _HomeViewState extends State<HomeView> {
             Info(),
             Expanded(
               child: NavigationRail(
-                labelType: NavigationRailLabelType.selected,
+                labelType: NavigationRailLabelType.all,
                 backgroundColor: accentColor,
                 onDestinationSelected: (int index) {
                   setState(() {
@@ -56,7 +56,16 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ],
                 selectedIconTheme: IconThemeData(color: textLight),
-                selectedLabelTextStyle: darkTextEng(),
+                selectedLabelTextStyle: TextStyle(
+                  fontFamily: 'RB',
+                  color: textLight,
+                  fontSize: 20,
+                ),
+                unselectedLabelTextStyle: TextStyle(
+                  fontFamily: 'RB',
+                  color: textDark,
+                  fontSize: 12,
+                ),
               ),
             ),
             ContactMe(),
