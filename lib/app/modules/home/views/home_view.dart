@@ -1,17 +1,72 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myweb/app/modules/card/views/card_view.dart';
+import 'package:myweb/app/modules/home/widgets/contactme.dart';
+import 'package:myweb/app/modules/portfolio/views/portfolio_view.dart';
 
-import 'package:get/get.dart';
-import 'package:myweb/app/modules/home/widgets/sidebar.dart';
-import 'package:myweb/palette.dart';
-
+import '../../../../palette.dart';
 import '../../../../responsive.dart';
-import '../controllers/home_controller.dart';
+import '../../devlog/views/devlog_view.dart';
+import '../widgets/info.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+class HomeView extends StatefulWidget {
+  HomeView({Key? key}) : super(key: key);
 
-  final int currentIndex = 0;
-  final List<Widget> body = const [];
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  final List<Widget> pages = [
+    CardView(),
+    PortfolioView(),
+    DevlogView(),
+  ];
+
+  // 데스크탑, 태블릿 drawer
+  Widget sideBar() {
+    return Drawer(
+      backgroundColor: accentColor,
+      child: SafeArea(
+        child: Column(
+          children: [
+            Info(),
+            Expanded(
+              child: NavigationRail(
+                labelType: NavigationRailLabelType.selected,
+                backgroundColor: accentColor,
+                onDestinationSelected: (int index) {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
+                selectedIndex: selectedIndex,
+                destinations: [
+                  NavigationRailDestination(
+                    icon: Icon(Icons.account_circle_outlined),
+                    label: Text('Who am i'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.account_balance_wallet),
+                    label: Text('Portfolio'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.add_a_photo),
+                    label: Text('Devlog'),
+                  ),
+                ],
+                selectedIconTheme: IconThemeData(color: textLight),
+                selectedLabelTextStyle: darkTextEng(),
+              ),
+            ),
+            ContactMe(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +86,7 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
             ),
-      drawer: SideBar(),
+      drawer: sideBar(), // 모바일 해상도 버전 AppBar with Drawer
       body: Center(
         child: Container(
           constraints: BoxConstraints(maxWidth: maxWidth),
@@ -41,18 +96,15 @@ class HomeView extends GetView<HomeController> {
               if (Responsive.isDesktop(context))
                 Expanded(
                   flex: 2,
-                  child: SideBar(),
+                  //데스크탑 버전 사이드바 Drawer
+                  child: sideBar(),
                 ),
-              SizedBox(
-                width: dafPadding,
-              ),
+              // SizedBox(
+              //   width: dafPadding,
+              // ),
               Expanded(
                 flex: 7,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [],
-                  ),
-                ),
+                child: pages[selectedIndex],
               ),
             ],
           ),

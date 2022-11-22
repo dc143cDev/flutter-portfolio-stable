@@ -14,7 +14,7 @@ const dafPadding = 20.0;
 const dafDuration = Duration(seconds: 1);
 const maxWidth = 1440.0;
 
-//폰트 테마. 테마에 적힌 색과 실제 적히는 색은 반대임. ex) 라이트 테마 - 블랙 컬러 폰트. 다크 테마 - 라이트 컬러 폰트.
+//폰트 테마. 테마에 적힌 색과 실제 적히는 색은 반대임. 라이트 테마 - 블랙 컬러 폰트. 다크 테마 - 라이트 컬러 폰트.
 lightTextEng() {
   return const TextStyle(
     fontWeight: FontWeight.w300,
