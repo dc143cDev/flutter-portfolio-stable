@@ -9,7 +9,7 @@ class Info extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: primaryDark,
+        color: secondaryColor,
         child: Column(
           children: [
             Spacer(
