@@ -9,7 +9,7 @@ class Info extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: secondaryColor,
+        color: primaryLight,
         child: Column(
           children: [
             Spacer(
@@ -22,12 +22,12 @@ class Info extends StatelessWidget {
             Spacer(),
             Text(
               "Yejoon Kim",
-              style: darkTextEng(),
+              style: lightTextEng(),
             ),
             Spacer(),
             Text(
               "Cross Platform App Dev",
-              style: darkTextEng(),
+              style: lightTextEng(),
             ),
             Spacer(
               flex: 2,

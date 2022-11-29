@@ -26,7 +26,7 @@ class _HomeViewState extends State<HomeView> {
   // 데스크탑, 태블릿 drawer
   Widget sideBar() {
     return Drawer(
-      backgroundColor: accentColor,
+      backgroundColor: primaryLight,
       child: SafeArea(
         child: Column(
           children: [
@@ -34,7 +34,7 @@ class _HomeViewState extends State<HomeView> {
             Expanded(
               child: NavigationRail(
                 labelType: NavigationRailLabelType.all,
-                backgroundColor: accentColor,
+                backgroundColor: primaryLight,
                 onDestinationSelected: (int index) {
                   setState(() {
                     selectedIndex = index;
@@ -55,16 +55,19 @@ class _HomeViewState extends State<HomeView> {
                     label: Text('Devlog'),
                   ),
                 ],
-                selectedIconTheme: IconThemeData(color: textLight),
+                selectedIconTheme: IconThemeData(color: primaryLight),
+                unselectedIconTheme: IconThemeData(color: primaryLight),
                 selectedLabelTextStyle: TextStyle(
+                  fontWeight: FontWeight.w500,
                   fontFamily: 'RB',
-                  color: textLight,
+                  color: accentColor,
                   fontSize: 20,
                 ),
                 unselectedLabelTextStyle: TextStyle(
+                  fontWeight: FontWeight.w400,
                   fontFamily: 'RB',
                   color: textDark,
-                  fontSize: 12,
+                  fontSize: 16,
                 ),
               ),
             ),

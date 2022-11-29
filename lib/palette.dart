@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 // 테마 컬러 팔레트. 추후 테마 체인지 버튼 구현시 프라이머리의 두 색을 치환.
-const primaryLight = Color(0xFFe3dbd3);
+const primaryLight = Color(0xFFffffff);
 const primaryDark = Color(0xff1b1b1b);
 const secondaryColor = Color(0xFF4c4c4c);
-const accentColor = Color(0xFF847c7c);
+const accentColor = Color(0xFF42bae6);
 const bgColor = Color(0xFF7b7470);
 const textLight = Color(0xFFe0dbde);
 const textDark = Color(0xFF000302);

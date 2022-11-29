@@ -19,14 +19,14 @@ class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: accentColor,
+      backgroundColor: primaryLight,
       child: SafeArea(
         child: Column(
           children: [
             Info(),
             Expanded(
               child: NavigationRail(
-                backgroundColor: accentColor,
+                backgroundColor: primaryLight,
                 onDestinationSelected: (int index) {
                   setState(() {
                     selectedIndex = index;

@@ -20,7 +20,7 @@ class ContactMe extends StatelessWidget {
       aspectRatio: 1.8,
       child: Container(
         padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
-        color: textDark,
+        color: primaryLight,
         child: Center(
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -30,13 +30,18 @@ class ContactMe extends StatelessWidget {
                   width: 50,
                   height: 50,
                   child: FloatingActionButton(
-                    backgroundColor: textDark,
+                    backgroundColor: accentColor,
                     onPressed: () {},
                     child: Image(
-                      image: AssetImage(
-                        'assets/images/linkedin.png',
-                      ),
+                      height: 20,
+                      width: 20,
+                      image: AssetImage('assets/images/linkedin-2.png'),
                     ),
+                    // child: Image(
+                    //   image: AssetImage(
+                    //     'assets/images/linkedin.png',
+                    //   ),
+                    // ),
                   ),
                 ),
                 SizedBox(
@@ -46,13 +51,15 @@ class ContactMe extends StatelessWidget {
                   width: 50,
                   height: 50,
                   child: FloatingActionButton(
-                    backgroundColor: textDark,
+                    backgroundColor: Color(0xFFeb5c6c),
                     onPressed: () {
                       _launchGithub();
                     },
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/free-icon-github-logo-25231.png',
+                    child: SizedBox(
+                      width: 30,
+                      height: 30,
+                      child: Image(
+                        image: AssetImage('assets/images/github.png'),
                       ),
                     ),
                   ),
@@ -64,11 +71,13 @@ class ContactMe extends StatelessWidget {
                   width: 50,
                   height: 50,
                   child: FloatingActionButton(
-                    backgroundColor: textDark,
+                    backgroundColor: Color(0xFFfbd33c),
                     onPressed: () {},
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/email.png',
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image(
+                        image: AssetImage('assets/images/paper-plane.png'),
                       ),
                     ),
                   ),
