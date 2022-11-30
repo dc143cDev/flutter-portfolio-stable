@@ -10,7 +10,7 @@ class DevlogView extends GetView<DevlogController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryLight,
+      backgroundColor: bgColor,
       body: Center(
         child: Text(
           'DevlogView is working',

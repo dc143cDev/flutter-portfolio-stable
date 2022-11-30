@@ -11,6 +11,7 @@ dependencies:
   flutter: 
     sdk: flutter
   url_launcher: ^6.1.7
+  firebase_core: ^2.3.0
 
 dev_dependencies:
   flutter_test: 
@@ -22,6 +23,12 @@ flutter:
   assets:
     - assets/images/
   fonts:
+    - family: TW
+      fonts:
+        - asset: assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf
+          weight: 300
     - family: RB
       fonts:
         - asset: assets/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf

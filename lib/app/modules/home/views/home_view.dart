@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myweb/app/modules/card/views/card_view.dart';
 import 'package:myweb/app/modules/home/widgets/contactme.dart';
 import 'package:myweb/app/modules/portfolio/views/portfolio_view.dart';
 
@@ -18,7 +17,6 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final List<Widget> pages = [
-    CardView(),
     PortfolioView(),
     DevlogView(),
   ];
@@ -26,6 +24,7 @@ class _HomeViewState extends State<HomeView> {
   // 데스크탑, 태블릿 drawer
   Widget sideBar() {
     return Drawer(
+      elevation: 10,
       backgroundColor: primaryLight,
       child: SafeArea(
         child: Column(
@@ -43,10 +42,6 @@ class _HomeViewState extends State<HomeView> {
                 selectedIndex: selectedIndex,
                 destinations: [
                   NavigationRailDestination(
-                    icon: Icon(Icons.account_circle_outlined),
-                    label: Text('Who am i'),
-                  ),
-                  NavigationRailDestination(
                     icon: Icon(Icons.account_balance_wallet),
                     label: Text('Portfolio'),
                   ),
@@ -60,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
                 selectedLabelTextStyle: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontFamily: 'RB',
-                  color: accentColor,
+                  color: accentBlue,
                   fontSize: 20,
                 ),
                 unselectedLabelTextStyle: TextStyle(
@@ -83,12 +78,12 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryLight,
+      backgroundColor: bgColor,
       // 해상도에 따라 데스크탑일시 앱바 x. 태블릿 환경이면 앱바 with drawer
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
-              backgroundColor: primaryDark,
+              backgroundColor: accentRed,
               leading: Builder(
                 builder: (context) => IconButton(
                   onPressed: () {
@@ -115,7 +110,7 @@ class _HomeViewState extends State<HomeView> {
               //   width: dafPadding,
               // ),
               Expanded(
-                flex: 7,
+                flex: 8,
                 child: pages[selectedIndex],
               ),
             ],

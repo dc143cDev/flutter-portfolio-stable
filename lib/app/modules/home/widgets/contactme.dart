@@ -30,7 +30,7 @@ class ContactMe extends StatelessWidget {
                   width: 50,
                   height: 50,
                   child: FloatingActionButton(
-                    backgroundColor: accentColor,
+                    backgroundColor: accentBlue,
                     onPressed: () {},
                     child: Image(
                       height: 20,
@@ -51,7 +51,7 @@ class ContactMe extends StatelessWidget {
                   width: 50,
                   height: 50,
                   child: FloatingActionButton(
-                    backgroundColor: Color(0xFFeb5c6c),
+                    backgroundColor: accentRed,
                     onPressed: () {
                       _launchGithub();
                     },
@@ -71,7 +71,7 @@ class ContactMe extends StatelessWidget {
                   width: 50,
                   height: 50,
                   child: FloatingActionButton(
-                    backgroundColor: Color(0xFFfbd33c),
+                    backgroundColor: accentYellow,
                     onPressed: () {},
                     child: SizedBox(
                       width: 25,

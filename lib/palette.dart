@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 // 테마 컬러 팔레트. 추후 테마 체인지 버튼 구현시 프라이머리의 두 색을 치환.
-const primaryLight = Color(0xFFffffff);
+const primaryLight = Color(0xFFececec);
 const primaryDark = Color(0xff1b1b1b);
 const secondaryColor = Color(0xFF4c4c4c);
-const accentColor = Color(0xFF42bae6);
-const bgColor = Color(0xFF7b7470);
+const accentBlue = Color(0xFF42bae6);
+const accentRed = Color(0xFFeb5c6c);
+const accentYellow = Color(0xFFfbd33c);
+const bgColor = Color(0xFFffffff);
 const textLight = Color(0xFFe0dbde);
 const textDark = Color(0xFF000302);
 
@@ -18,7 +20,7 @@ const maxWidth = 1440.0;
 lightTextEng() {
   return const TextStyle(
     fontWeight: FontWeight.w300,
-    fontFamily: 'RB',
+    fontFamily: 'TW',
     color: textDark,
   );
 }
@@ -26,7 +28,7 @@ lightTextEng() {
 darkTextEng() {
   return const TextStyle(
     fontWeight: FontWeight.w300,
-    fontFamily: 'RB',
+    fontFamily: 'TW',
     color: textLight,
   );
 }
@@ -44,5 +46,13 @@ darkTextKr() {
     fontWeight: FontWeight.w300,
     fontFamily: 'IBM',
     color: textLight,
+  );
+}
+
+titleEng() {
+  return const TextStyle(
+    fontFamily: 'TW',
+    fontWeight: FontWeight.w300,
+    fontSize: 26,
   );
 }

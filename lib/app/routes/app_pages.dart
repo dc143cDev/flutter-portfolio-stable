@@ -1,7 +1,5 @@
 import 'package:get/get.dart';
 
-import '../modules/card/bindings/card_binding.dart';
-import '../modules/card/views/card_view.dart';
 import '../modules/devlog/bindings/devlog_binding.dart';
 import '../modules/devlog/views/devlog_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -40,11 +38,6 @@ class AppPages {
       name: _Paths.DEVLOG,
       page: () => const DevlogView(),
       binding: DevlogBinding(),
-    ),
-    GetPage(
-      name: _Paths.CARD,
-      page: () => const CardView(),
-      binding: CardBinding(),
     ),
   ];
 }
