@@ -8,9 +8,10 @@ import 'package:myweb/app/modules/home/bindings/home_binding.dart';
 import 'package:myweb/app/modules/home/views/home_view.dart';
 import 'package:myweb/app/modules/portfolio/bindings/portfolio_binding.dart';
 import 'package:myweb/app/modules/portfolio/views/portfolio_view.dart';
-import 'package:myweb/firebase_options.dart';
+// import 'package:myweb/firebase_options.dart';
 
 import 'app/routes/app_pages.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
