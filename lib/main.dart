@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -8,16 +7,10 @@ import 'package:myweb/app/modules/home/bindings/home_binding.dart';
 import 'package:myweb/app/modules/home/views/home_view.dart';
 import 'package:myweb/app/modules/portfolio/bindings/portfolio_binding.dart';
 import 'package:myweb/app/modules/portfolio/views/portfolio_view.dart';
-// import 'package:myweb/firebase_options.dart';
 
 import 'app/routes/app_pages.dart';
-import 'firebase_options.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
