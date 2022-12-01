@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myweb/palette.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,6 +12,14 @@ class ContactMe extends StatelessWidget {
   }
 
   final Uri _githubUrl = Uri.parse('https://github.com/dc143cDev');
+
+  Future<void> _launchVelog() async {
+    if (!await launchUrl(_velogUrl)) {
+      throw 'Could not launch $_velogUrl';
+    }
+  }
+
+  final Uri _velogUrl = Uri.parse('https://velog.io/@dc143c_dev');
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +38,13 @@ class ContactMe extends StatelessWidget {
                   height: 50,
                   child: FloatingActionButton(
                     backgroundColor: accentBlue,
-                    onPressed: () {},
+                    onPressed: () {
+                      _launchVelog();
+                    },
                     child: Image(
                       height: 20,
                       width: 20,
-                      image: AssetImage('assets/images/linkedin-2.png'),
+                      image: AssetImage('assets/images/Subject.png'),
                     ),
                     // child: Image(
                     //   image: AssetImage(
@@ -72,7 +81,17 @@ class ContactMe extends StatelessWidget {
                   height: 50,
                   child: FloatingActionButton(
                     backgroundColor: accentYellow,
-                    onPressed: () {},
+                    onPressed: () async {
+                      String email = 'devc143c@gmail.com';
+                      String sub = '';
+                      String body = '';
+
+                      final Uri _emailUrl =
+                          Uri.parse("mailto:$email?subject=$sub&body=$body");
+                      if (!await launchUrl(_emailUrl)) {
+                        throw 'Could not launch $_emailUrl';
+                      }
+                    },
                     child: SizedBox(
                       width: 25,
                       height: 25,

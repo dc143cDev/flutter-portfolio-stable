@@ -16,10 +16,9 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final List<Widget> pages = [
-    PortfolioView(),
-    DevlogView(),
-  ];
+  // final List<Widget> pages = [
+  //   PortfolioView(),
+  // ];
 
   // 데스크탑, 태블릿 drawer
   Widget sideBar() {
@@ -31,40 +30,37 @@ class _HomeViewState extends State<HomeView> {
           children: [
             Info(),
             Expanded(
-              child: NavigationRail(
-                labelType: NavigationRailLabelType.all,
-                backgroundColor: primaryLight,
-                onDestinationSelected: (int index) {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                selectedIndex: selectedIndex,
-                destinations: [
-                  NavigationRailDestination(
-                    icon: Icon(Icons.account_balance_wallet),
-                    label: Text('Portfolio'),
-                  ),
-                  NavigationRailDestination(
-                    icon: Icon(Icons.add_a_photo),
-                    label: Text('Devlog'),
-                  ),
-                ],
-                selectedIconTheme: IconThemeData(color: primaryLight),
-                unselectedIconTheme: IconThemeData(color: primaryLight),
-                selectedLabelTextStyle: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontFamily: 'RB',
-                  color: accentBlue,
-                  fontSize: 20,
-                ),
-                unselectedLabelTextStyle: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontFamily: 'RB',
-                  color: textDark,
-                  fontSize: 16,
-                ),
-              ),
+              child: Container(),
+              // child: NavigationRail(
+              //   labelType: NavigationRailLabelType.all,
+              //   backgroundColor: primaryLight,
+              //   onDestinationSelected: (int index) {
+              //     setState(() {
+              //       selectedIndex = index;
+              //     });
+              //   },
+              //   selectedIndex: selectedIndex,
+              //   destinations: [
+              //     NavigationRailDestination(
+              //       icon: Icon(Icons.account_balance_wallet),
+              //       label: Text('Portfolio'),
+              //     ),
+              //   ],
+              //   selectedIconTheme: IconThemeData(color: primaryLight),
+              //   unselectedIconTheme: IconThemeData(color: primaryLight),
+              //   selectedLabelTextStyle: TextStyle(
+              //     fontWeight: FontWeight.w500,
+              //     fontFamily: 'RB',
+              //     color: accentBlue,
+              //     fontSize: 20,
+              //   ),
+              //   unselectedLabelTextStyle: TextStyle(
+              //     fontWeight: FontWeight.w400,
+              //     fontFamily: 'RB',
+              //     color: textDark,
+              //     fontSize: 16,
+              //   ),
+              // ),
             ),
             ContactMe(),
           ],
@@ -111,7 +107,7 @@ class _HomeViewState extends State<HomeView> {
               // ),
               Expanded(
                 flex: 8,
-                child: pages[selectedIndex],
+                child: PortfolioView(),
               ),
             ],
           ),
