@@ -21,7 +21,7 @@ class Info extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              "Y",
+              "Ya",
               style: lightTextEng(),
             ),
             Spacer(),
