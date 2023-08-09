@@ -21,7 +21,7 @@ class Info extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              "Yejoon Kim",
+              "Y",
               style: lightTextEng(),
             ),
             Spacer(),
