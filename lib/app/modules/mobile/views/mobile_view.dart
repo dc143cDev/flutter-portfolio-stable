@@ -10,7 +10,7 @@ class MobileView extends GetView<MobileController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MobileView'),
+        title: const Text('MobileVie'),
         centerTitle: true,
       ),
       body: Center(
