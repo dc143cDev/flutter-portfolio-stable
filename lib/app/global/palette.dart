@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 //공통
 var primaryCrimson = Color(0xffbf0030);
+var onPrimary = Color(0xffffffff);
 var outline = Color(0xff857372);
 
 //light

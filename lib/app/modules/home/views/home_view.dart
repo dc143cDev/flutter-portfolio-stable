@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:myweb/app/global/global_controller.dart';
 import 'package:myweb/app/global/palette.dart';
+import 'package:myweb/app/modules/home/views/blog_view.dart';
+import 'package:myweb/app/modules/home/views/project_view.dart';
 
 import '../controllers/home_controller.dart';
+import 'me_view.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
@@ -14,15 +18,9 @@ class HomeView extends GetView<HomeController> {
     double mediaQueryHeight = MediaQuery.of(context).size.height;
 
     List<Widget> screen = [
-      Column(
-        children: [Text('1'), Text('1')],
-      ),
-      Column(
-        children: [Text('2'), Text('2')],
-      ),
-      Column(
-        children: [Text('3'), Text('3')],
-      ),
+      MeView(),
+      ProjectView(),
+      BlogView(),
     ];
 
     return Scaffold(
@@ -40,13 +38,6 @@ class HomeView extends GetView<HomeController> {
                     color: tone95,
                     child: Column(
                       children: [
-                        //프로필.
-                        // Expanded(
-                        //   flex: 2,
-                        //   child: Container(
-                        //   ),
-                        // ),
-                        //네비게이션 버튼.
                         Expanded(
                           flex: 8,
                           child: Column(
@@ -242,17 +233,12 @@ class HomeView extends GetView<HomeController> {
                 ),
                 Expanded(
                   flex: 8,
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: Obx(
-                          () => SingleChildScrollView(
-                            scrollDirection: Axis.vertical,
-                            child: screen[controller.screenIndex.value],
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: Obx(
+                    () => SingleChildScrollView(
+                      physics: AlwaysScrollableScrollPhysics(),
+                      scrollDirection: Axis.vertical,
+                      child: screen[controller.screenIndex.value],
+                    ),
                   ),
                 ),
               ],
