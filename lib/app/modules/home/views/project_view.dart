@@ -9,7 +9,6 @@ class ProjectView extends GetView {
 
   @override
   Widget build(BuildContext context) {
-
     double mediaQueryWidth = MediaQuery.of(context).size.width;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
 
@@ -19,11 +18,13 @@ class ProjectView extends GetView {
         return SizedBox(
           width: mediaQueryWidth * 0.8,
           height: mediaQueryHeight * 1,
-          child: ListView(
-            physics: AlwaysScrollableScrollPhysics(),
-            children: [
-              Container(color: Colors.red, height: 50, width: 50,),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+
+              ],
+            ),
           ),
         );
       },
