@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 
 class GlobalController extends GetxController {
@@ -8,11 +10,32 @@ class GlobalController extends GetxController {
   var width = 0.0.obs;
   var height = 0.0.obs;
 
+  var isDarkMode = false.obs;
 
+  final isDeviceThemeDark =
+      SchedulerBinding.instance.window.platformBrightness == Brightness.dark;
+
+  getDeviceTheme() {
+    if (isDeviceThemeDark == true) {
+      isDarkMode.value = true;
+      print('isDark');
+      // Get.changeThemeMode(ThemeMode.dark);
+      // Get.changeTheme(
+      //   ThemeData.dark(useMaterial3: true),
+      // );
+    } else {
+      print('isLight');
+      // Get.changeThemeMode(ThemeMode.light);
+      // Get.changeTheme(
+      //   ThemeData.light(useMaterial3: true),
+      // );
+    }
+  }
 
   @override
-  void onInit() {
+  void onInit() async{
     super.onInit();
+    getDeviceTheme();
 
     width.value = Get.width;
     height.value = Get.height;

@@ -21,8 +21,12 @@ var tone95 = Color(0xffffedec);
 
 //dark
 
+var onPrimaryDark = Color(0xff680015);
+
 var backgroundDark = Color(0xff201a1a);
 var secondDark = Color(0xff44292a);
 var thirdDark = Color(0xff5b421a);
 var containerDark = Color(0xff920022);
 var textDark = Color(0xffece0df);
+var onThirdDark = Color(0xffffddaf);
+var tertiaryDark = Color(0xff3ffdad9);
