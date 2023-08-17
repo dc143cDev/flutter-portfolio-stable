@@ -39,14 +39,14 @@ class CareerView extends GetView {
                   ),
                 ),
                 Expanded(
-                  flex: 6,
+                  flex: 5,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -68,15 +68,17 @@ class CareerView extends GetView {
                                 ),
                               ),
                             ),
-                            Text(
-                              "This is a page of my Career;",
-                              style: TextStyle(
-                                color: global.isDarkMode.value == true
-                                    ? textDark
-                                    : primaryCrimson,
-                                // fontWeight: FontWeight.bold,
-                                fontSize:
-                                mediaQueryWidth < 900 == true ? 10 : 20,
+                            Expanded(
+                              child: Text(
+                                "This is a page of my Career;",
+                                style: TextStyle(
+                                  color: global.isDarkMode.value == true
+                                      ? textDark
+                                      : primaryCrimson,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize:
+                                  mediaQueryWidth < 900 == true ? 10 : 20,
+                                ),
                               ),
                             ),
                           ],
