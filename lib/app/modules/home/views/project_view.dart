@@ -66,11 +66,13 @@ class ProjectView extends GetView<HomeController> {
                                     if(mediaQueryWidth < 700){
                                       controller.motomeeFocused.value = true;
                                     }
+                                    // if(controller.motomeeFocused.value == true && mediaQueryWidth < 700){
+                                    //   controller.motomeeFocused.value = false;
+                                    // }
                                   },
                                   onHover: (hm) {
                                     if (hm == true && mediaQueryWidth > 700) {
                                       controller.motomeeFocused.value = true;
-                                      print('objec');
                                     } else {
                                       controller.motomeeFocused.value = false;
                                     }
@@ -130,7 +132,7 @@ class ProjectView extends GetView<HomeController> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
-                                                                        fontSize: mediaQueryWidth * 0.015,
+                                                                        fontSize: mediaQueryWidth > 700 == true ? null : mediaQueryWidth * 0.02,
                                                                   ),
                                                                 ),
                                                               ),
@@ -149,7 +151,7 @@ class ProjectView extends GetView<HomeController> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
-                                                                        fontSize: mediaQueryWidth * 0.015,
+                                                                        fontSize: mediaQueryWidth > 700 == true ? null : mediaQueryWidth * 0.02,
                                                                   ),
                                                                 ),
                                                               ),
