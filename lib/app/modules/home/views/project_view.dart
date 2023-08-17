@@ -55,7 +55,7 @@ class ProjectView extends GetView<HomeController> {
                   ),
                 ),
                 Expanded(
-                  flex: 6,
+                  flex: 5,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -333,7 +333,7 @@ class ProjectView extends GetView<HomeController> {
                   ),
                 ),
                 Expanded(
-                  flex: 4,
+                  flex: 3,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -343,25 +343,29 @@ class ProjectView extends GetView<HomeController> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Project",
-                              style: TextStyle(
-                                color: global.isDarkMode.value == true
-                                    ? textDark
-                                    : primaryCrimson,
-                                fontWeight: FontWeight.bold,
-                                fontSize: mediaQueryWidth * 0.05,
+                            Expanded(
+                              child: Text(
+                                "Project",
+                                style: TextStyle(
+                                  color: global.isDarkMode.value == true
+                                      ? textDark
+                                      : primaryCrimson,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: mediaQueryWidth * 0.04,
+                                ),
                               ),
                             ),
-                            Text(
-                              "This is a page of my projects;",
-                              style: TextStyle(
-                                color: global.isDarkMode.value == true
-                                    ? textDark
-                                    : primaryCrimson,
-                                // fontWeight: FontWeight.bold,
-                                fontSize:
-                                    mediaQueryWidth < 900 == true ? 10 : 20,
+                            Expanded(
+                              child: Text(
+                                "This is a page of my projects;",
+                                style: TextStyle(
+                                  color: global.isDarkMode.value == true
+                                      ? textDark
+                                      : primaryCrimson,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize:
+                                      mediaQueryWidth < 900 == true ? 10 : 20,
+                                ),
                               ),
                             ),
                             Expanded(

@@ -46,7 +46,7 @@ class CareerView extends GetView {
                   ),
                 ),
                 Expanded(
-                  flex: 4,
+                  flex: 2,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -56,14 +56,16 @@ class CareerView extends GetView {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Career",
-                              style: TextStyle(
-                                color: global.isDarkMode.value == true
-                                    ? textDark
-                                    : primaryCrimson,
-                                fontWeight: FontWeight.bold,
-                                fontSize: mediaQueryWidth * 0.05,
+                            Expanded(
+                              child: Text(
+                                "Career",
+                                style: TextStyle(
+                                  color: global.isDarkMode.value == true
+                                      ? textDark
+                                      : primaryCrimson,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: mediaQueryWidth * 0.04,
+                                ),
                               ),
                             ),
                             Text(
@@ -75,20 +77,6 @@ class CareerView extends GetView {
                                 // fontWeight: FontWeight.bold,
                                 fontSize:
                                 mediaQueryWidth < 900 == true ? 10 : 20,
-                              ),
-                            ),
-                            Expanded(
-                              child: Text(
-                                "",
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  color: global.isDarkMode.value == true
-                                      ? textDark
-                                      : primaryCrimson,
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize:
-                                  mediaQueryWidth < 900 == true ? 10 : 20,
-                                ),
                               ),
                             ),
                           ],
