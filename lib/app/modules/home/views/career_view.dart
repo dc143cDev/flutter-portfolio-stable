@@ -7,6 +7,7 @@ import '../../../global/palette.dart';
 
 class CareerView extends GetView {
   const CareerView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     double mediaQueryWidth = MediaQuery.of(context).size.width;
@@ -57,27 +58,31 @@ class CareerView extends GetView {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
-                              child: Text(
-                                "Career",
-                                style: TextStyle(
-                                  color: global.isDarkMode.value == true
-                                      ? textDark
-                                      : primaryCrimson,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: mediaQueryWidth * 0.04,
+                              child: Obx(
+                                () => Text(
+                                  "Career",
+                                  style: TextStyle(
+                                    color: global.isDarkMode.value == true
+                                        ? textDark
+                                        : primaryCrimson,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: mediaQueryWidth * 0.04,
+                                  ),
                                 ),
                               ),
                             ),
                             Expanded(
-                              child: Text(
-                                "This is a page of my Career;",
-                                style: TextStyle(
-                                  color: global.isDarkMode.value == true
-                                      ? textDark
-                                      : primaryCrimson,
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize:
-                                  mediaQueryWidth < 900 == true ? 10 : 20,
+                              child: Obx(
+                                () => Text(
+                                  "This is a page of my Career;".tr,
+                                  style: TextStyle(
+                                    color: global.isDarkMode.value == true
+                                        ? textDark
+                                        : primaryCrimson,
+                                    // fontWeight: FontWeight.bold,
+                                    fontSize:
+                                        mediaQueryWidth < 900 == true ? 10 : 20,
+                                  ),
                                 ),
                               ),
                             ),

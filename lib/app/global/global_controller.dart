@@ -15,6 +15,17 @@ class GlobalController extends GetxController {
   final isDeviceThemeDark =
       SchedulerBinding.instance.window.platformBrightness == Brightness.dark;
 
+  lightModeOn(){
+    Get.changeThemeMode(ThemeMode.light);
+    Get.changeTheme(ThemeData.light(useMaterial3: true));
+    isDarkMode.value = false;
+  }
+  darkModeOn(){
+    Get.changeThemeMode(ThemeMode.dark);
+    Get.changeTheme(ThemeData.dark(useMaterial3: true));
+    isDarkMode.value = true;
+  }
+
   getDeviceTheme() {
     if (isDeviceThemeDark == true) {
       isDarkMode.value = true;
