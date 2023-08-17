@@ -586,7 +586,7 @@ class MeView extends GetView {
                                               ? tertiaryDark
                                               : tertiaryLight,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: mediaQueryWidth * 0.035,
+                                          fontSize: mediaQueryWidth * 0.015,
                                         ),
                                       ),
                                     ),
@@ -637,7 +637,7 @@ class MeView extends GetView {
                                               ? tertiaryDark
                                               : tertiaryLight,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: mediaQueryWidth * 0.035,
+                                          fontSize: mediaQueryWidth * 0.015,
                                         ),
                                       ),
                                     ),

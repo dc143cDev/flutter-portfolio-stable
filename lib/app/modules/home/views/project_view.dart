@@ -3,11 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myweb/app/global/palette.dart';
 import 'package:myweb/app/modules/home/controllers/home_controller.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../global/global_controller.dart';
 
 class ProjectView extends GetView<HomeController> {
-  const ProjectView({Key? key}) : super(key: key);
+  ProjectView({Key? key}) : super(key: key);
+
+  Future<void> _launchMotomee() async {
+    if (!await launchUrl(_motomeeUrl)) {
+      throw 'Could not launch $_motomeeUrl';
+    }
+  }
+
+  final Uri _motomeeUrl = Uri.parse('https://play.google.com/store/apps/details?id=com.dc143c.memotile');
 
   @override
   Widget build(BuildContext context) {
@@ -117,9 +126,11 @@ class ProjectView extends GetView<HomeController> {
                                                                   'Motomee is a memo app that works like a chat app',
                                                                   style:
                                                                       TextStyle(
+                                                                        color: textLight,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
+                                                                        fontSize: mediaQueryWidth * 0.015,
                                                                   ),
                                                                 ),
                                                               ),
@@ -134,9 +145,11 @@ class ProjectView extends GetView<HomeController> {
                                                                   'And also Optimized for typing and manipulating simple notes',
                                                                   style:
                                                                       TextStyle(
+                                                                        color: textLight,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
+                                                                        fontSize: mediaQueryWidth * 0.015,
                                                                   ),
                                                                 ),
                                                               ),
@@ -264,33 +277,38 @@ class ProjectView extends GetView<HomeController> {
                                 ),
                               ),
                             ),
-                            Container(
-                              height: mediaQueryHeight * 0.23,
-                              // width: mediaQueryWidth * 0.3,
-                              decoration: BoxDecoration(
-                                color: Color(0xfffbfbfb),
-                                borderRadius: BorderRadius.circular(25),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      height: mediaQueryWidth < 700 == true
-                                          ? mediaQueryWidth * 0.2
-                                          : mediaQueryWidth * 0.07,
-                                      width: mediaQueryWidth < 700 == true
-                                          ? mediaQueryWidth * 0.2
-                                          : mediaQueryWidth * 0.07,
-                                      child: Image(
-                                        image: AssetImage(
-                                          'images/motomeelogowj2.jpeg',
+                            InkWell(
+                              onTap: (){
+                                _launchMotomee();
+                              },
+                              child: Container(
+                                height: mediaQueryHeight * 0.23,
+                                // width: mediaQueryWidth * 0.3,
+                                decoration: BoxDecoration(
+                                  color: Color(0xfffbfbfb),
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: mediaQueryWidth < 700 == true
+                                            ? mediaQueryWidth * 0.2
+                                            : mediaQueryWidth * 0.07,
+                                        width: mediaQueryWidth < 700 == true
+                                            ? mediaQueryWidth * 0.2
+                                            : mediaQueryWidth * 0.07,
+                                        child: Image(
+                                          image: AssetImage(
+                                            'images/motomeelogowj2.jpeg',
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
