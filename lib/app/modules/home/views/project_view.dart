@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,6 +10,10 @@ import '../../../global/global_controller.dart';
 
 class ProjectView extends GetView<HomeController> {
   ProjectView({Key? key}) : super(key: key);
+
+  String path(str) {
+    return (kIsWeb) ? 'assets/$str' : str;
+  }
 
   Future<void> _launchMotomee() async {
     if (!await launchUrl(_motomeeUrl)) {
@@ -258,7 +263,7 @@ class ProjectView extends GetView<HomeController> {
                                                             'Motomee - chat like Memo app',
                                                             style: TextStyle(
                                                               color: textLight,
-                                                              fontSize: 16,
+                                                              fontSize: mediaQueryWidth > 700 == true ? null : mediaQueryWidth * 0.025,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
@@ -267,6 +272,7 @@ class ProjectView extends GetView<HomeController> {
                                                         ),
                                                         Icon(
                                                           Icons.arrow_drop_down,
+                                                          color: textLight,
                                                         ),
                                                       ],
                                                     ),
@@ -305,7 +311,9 @@ class ProjectView extends GetView<HomeController> {
                                             : mediaQueryWidth * 0.07,
                                         child: Image(
                                           image: AssetImage(
-                                            'images/motomeelogowj2.jpeg',
+                                            path(
+                                              'images/motomeelogowj2.jpeg',
+                                            ),
                                           ),
                                         ),
                                       ),

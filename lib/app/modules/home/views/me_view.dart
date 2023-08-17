@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -25,6 +26,10 @@ class StylizedFlutterLogo extends StatelessWidget {
 //view.
 class MeView extends GetView {
   MeView({Key? key}) : super(key: key);
+
+  String path(str) {
+    return (kIsWeb) ? 'assets/$str' : str;
+  }
 
   Future<void> _launchGithub() async {
     if (!await launchUrl(_githubUrl)) {
@@ -314,7 +319,9 @@ class MeView extends GetView {
                                                 padding: EdgeInsets.all(8.0),
                                                 child: Image(
                                                   image: AssetImage(
-                                                    'images/firebase_logo.png',
+                                                    path(
+                                                      'images/firebase_logo.png',
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -356,7 +363,9 @@ class MeView extends GetView {
                                                 padding: EdgeInsets.all(8.0),
                                                 child: Image(
                                                   image: AssetImage(
-                                                    'images/awslogo.png',
+                                                    path(
+                                                      'images/awslogo.png',
+                                                    ),
                                                   ),
                                                 ),
                                               ),
