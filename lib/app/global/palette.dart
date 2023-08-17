@@ -12,6 +12,7 @@ var outline = Color(0xff857372);
 var backgroundLight = Color(0xfffffbff);
 var secondLight = Color(0xff775656);
 var thirdLight = Color(0xffffddaf);
+var third80Light = Color(0xffe5c18d);
 var onThirdLight = Color(0xf281800);
 var containerLight = Color(0xffffdad9);
 var textLight = Color(0xff201a1a);

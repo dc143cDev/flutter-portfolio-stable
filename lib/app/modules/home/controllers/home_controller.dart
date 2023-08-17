@@ -8,6 +8,8 @@ class HomeController extends GetxController {
   var projectFocused = false.obs;
   var blogFocused = false.obs;
 
+  var motomeeFocused = false.obs;
+
   portfolioOn(){
     portfolioFocused.value = true;
     projectFocused.value = false;

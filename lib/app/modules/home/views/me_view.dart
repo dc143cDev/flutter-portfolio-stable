@@ -76,7 +76,9 @@ class MeView extends GetView {
                                 Text(
                                   "DC143C's Web",
                                   style: TextStyle(
-                                    color: global.isDarkMode.value == true ? textDark :primaryCrimson,
+                                    color: global.isDarkMode.value == true
+                                        ? textDark
+                                        : primaryCrimson,
                                     fontWeight: FontWeight.bold,
                                     fontSize: mediaQueryWidth * 0.05,
                                   ),
@@ -84,7 +86,9 @@ class MeView extends GetView {
                                 Text(
                                   "Welcome to My Portfolio Web",
                                   style: TextStyle(
-                                    color: global.isDarkMode.value == true ? textDark :primaryCrimson,
+                                    color: global.isDarkMode.value == true
+                                        ? textDark
+                                        : primaryCrimson,
                                     // fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                   ),
@@ -93,7 +97,9 @@ class MeView extends GetView {
                                   child: Text(
                                     "You can look around the skill I have \nAnd the projects I've developed on this Web;",
                                     style: TextStyle(
-                                      color: global.isDarkMode.value == true ? textDark :primaryCrimson,
+                                      color: global.isDarkMode.value == true
+                                          ? textDark
+                                          : primaryCrimson,
                                       // fontWeight: FontWeight.bold,
                                       fontSize: mediaQueryWidth < 700 == true
                                           ? 10
@@ -115,7 +121,9 @@ class MeView extends GetView {
                                   topRight: Radius.circular(35),
                                   // topLeft: Radius.circular(25),
                                 ),
-                                color: global.isDarkMode.value == true ? textDark :primaryCrimson,
+                                color: global.isDarkMode.value == true
+                                    ? textDark
+                                    : primaryCrimson,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -126,16 +134,22 @@ class MeView extends GetView {
                                     Text(
                                       "I'm Cross Platform App Dev",
                                       style: TextStyle(
-                                        color: global.isDarkMode.value == true ? onPrimaryDark : onPrimary,
+                                        color: global.isDarkMode.value == true
+                                            ? onPrimaryDark
+                                            : onPrimary,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: mediaQueryHeight < 600 == true ? mediaQueryWidth * 0.03  : mediaQueryWidth * 0.05,
+                                        fontSize: mediaQueryHeight < 600 == true
+                                            ? mediaQueryWidth * 0.03
+                                            : mediaQueryWidth * 0.05,
                                       ),
                                     ),
                                     Expanded(
                                       child: Text(
                                         "I started learnning Flutter to make my own apps,\nBut now I'm trying to make apps that can be used by \nMany people with more diverse skills;",
                                         style: TextStyle(
-                                          color: global.isDarkMode.value == true ? onPrimaryDark : onPrimary,
+                                          color: global.isDarkMode.value == true
+                                              ? onPrimaryDark
+                                              : onPrimary,
                                           fontWeight: FontWeight.bold,
                                           fontSize:
                                               mediaQueryWidth < 700 == true
@@ -170,7 +184,9 @@ class MeView extends GetView {
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(35),
                                 ),
-                                color: global.isDarkMode.value == true ? thirdDark :thirdLight,
+                                color: global.isDarkMode.value == true
+                                    ? thirdDark
+                                    : thirdLight,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -181,7 +197,9 @@ class MeView extends GetView {
                                     Text(
                                       "Skill",
                                       style: TextStyle(
-                                        color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                        color: global.isDarkMode.value == true
+                                            ? onThirdDark
+                                            : textLight,
                                         fontWeight: FontWeight.bold,
                                         fontSize: mediaQueryWidth * 0.05,
                                       ),
@@ -196,7 +214,12 @@ class MeView extends GetView {
                                               borderRadius:
                                                   BorderRadius.circular(20),
                                               border: Border.all(
-                                                  color: global.isDarkMode.value == true ? onThirdDark :textLight, width: 2.5),
+                                                  color:
+                                                      global.isDarkMode.value ==
+                                                              true
+                                                          ? onThirdDark
+                                                          : textLight,
+                                                  width: 2.5),
                                             ),
                                             child: Padding(
                                               padding: EdgeInsets.all(8.0),
@@ -232,7 +255,10 @@ class MeView extends GetView {
                                         Text(
                                           "  Flutter",
                                           style: TextStyle(
-                                            color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                            color:
+                                                global.isDarkMode.value == true
+                                                    ? onThirdDark
+                                                    : textLight,
                                             fontWeight: FontWeight.bold,
                                             fontSize: mediaQueryWidth * 0.02,
                                           ),
@@ -249,7 +275,11 @@ class MeView extends GetView {
                                             child: Text(
                                               "   · GetX State Management",
                                               style: TextStyle(
-                                                color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                                color:
+                                                    global.isDarkMode.value ==
+                                                            true
+                                                        ? onThirdDark
+                                                        : textLight,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize:
                                                     mediaQueryWidth * 0.015,
@@ -273,7 +303,11 @@ class MeView extends GetView {
                                                 borderRadius:
                                                     BorderRadius.circular(20),
                                                 border: Border.all(
-                                                    color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                                    color: global.isDarkMode
+                                                                .value ==
+                                                            true
+                                                        ? onThirdDark
+                                                        : textLight,
                                                     width: 2.5),
                                               ),
                                               child: Padding(
@@ -289,76 +323,16 @@ class MeView extends GetView {
                                           Text(
                                             "  Firebase",
                                             style: TextStyle(
-                                              color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                              color: global.isDarkMode.value ==
+                                                      true
+                                                  ? onThirdDark
+                                                  : textLight,
                                               fontWeight: FontWeight.bold,
                                               fontSize: mediaQueryWidth * 0.02,
                                             ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                    Expanded(
-                                      child: Row(
-                                        children: [
-                                          SizedBox(
-                                            width: mediaQueryHeight * 0.08,
-                                          ),
-                                          Expanded(
-                                            child: Text(
-                                              "   · Storage",
-                                              style: TextStyle(
-                                                color: global.isDarkMode.value == true ? onThirdDark :textLight,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize:
-                                                    mediaQueryWidth * 0.015,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Row(
-                                        children: [
-                                          SizedBox(
-                                            width: mediaQueryHeight * 0.08,
-                                          ),
-                                          Expanded(
-                                            child: Text(
-                                              "   · Database",
-                                              style: TextStyle(
-                                                color: global.isDarkMode.value == true ? onThirdDark :textLight,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize:
-                                                    mediaQueryWidth * 0.015,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Row(
-                                        children: [
-                                          SizedBox(
-                                            width: mediaQueryHeight * 0.08,
-                                          ),
-                                          Expanded(
-                                            child: Text(
-                                              "   · Authentication",
-                                              style: TextStyle(
-                                                color: global.isDarkMode.value == true ? onThirdDark :textLight,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize:
-                                                    mediaQueryWidth * 0.015,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 20,
                                     ),
                                     Expanded(
                                       child: Row(
@@ -371,23 +345,30 @@ class MeView extends GetView {
                                                 borderRadius:
                                                     BorderRadius.circular(20),
                                                 border: Border.all(
-                                                    color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                                    color: global.isDarkMode
+                                                                .value ==
+                                                            true
+                                                        ? onThirdDark
+                                                        : textLight,
                                                     width: 2.5),
                                               ),
                                               child: Padding(
                                                 padding: EdgeInsets.all(8.0),
                                                 child: Image(
                                                   image: AssetImage(
-                                                    'images/jsnodelogo.png',
+                                                    'images/awslogo.png',
                                                   ),
                                                 ),
                                               ),
                                             ),
                                           ),
                                           Text(
-                                            "  Node.js",
+                                            "  AWS EC2",
                                             style: TextStyle(
-                                              color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                              color: global.isDarkMode.value ==
+                                                      true
+                                                  ? onThirdDark
+                                                  : textLight,
                                               fontWeight: FontWeight.bold,
                                               fontSize: mediaQueryWidth * 0.02,
                                             ),
@@ -399,20 +380,168 @@ class MeView extends GetView {
                                       child: Row(
                                         children: [
                                           SizedBox(
-                                            width: mediaQueryHeight * 0.08,
+                                            width: mediaQueryHeight * 0.065,
+                                            height: mediaQueryHeight * 0.065,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                                border: Border.all(
+                                                    color: global.isDarkMode
+                                                                .value ==
+                                                            true
+                                                        ? onThirdDark
+                                                        : textLight,
+                                                    width: 2.5),
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsets.all(8.0),
+                                                child: Icon(Icons.sd_storage),
+                                              ),
+                                            ),
                                           ),
                                           Text(
-                                            "   · Web Server",
+                                            "  SQL",
                                             style: TextStyle(
-                                              overflow: TextOverflow.ellipsis,
-                                              color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                              color: global.isDarkMode.value ==
+                                                      true
+                                                  ? onThirdDark
+                                                  : textLight,
                                               fontWeight: FontWeight.bold,
-                                              fontSize: mediaQueryWidth * 0.015,
+                                              fontSize: mediaQueryWidth * 0.02,
                                             ),
                                           ),
                                         ],
                                       ),
                                     ),
+                                    // Expanded(
+                                    //   child: Row(
+                                    //     children: [
+                                    //       SizedBox(
+                                    //         width: mediaQueryHeight * 0.08,
+                                    //       ),
+                                    //       Expanded(
+                                    //         child: Text(
+                                    //           "   · Storage",
+                                    //           style: TextStyle(
+                                    //             color:
+                                    //                 global.isDarkMode.value ==
+                                    //                         true
+                                    //                     ? onThirdDark
+                                    //                     : textLight,
+                                    //             fontWeight: FontWeight.bold,
+                                    //             fontSize:
+                                    //                 mediaQueryWidth * 0.015,
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                    // Expanded(
+                                    //   child: Row(
+                                    //     children: [
+                                    //       SizedBox(
+                                    //         width: mediaQueryHeight * 0.08,
+                                    //       ),
+                                    //       Expanded(
+                                    //         child: Text(
+                                    //           "   · Database",
+                                    //           style: TextStyle(
+                                    //             color:
+                                    //                 global.isDarkMode.value ==
+                                    //                         true
+                                    //                     ? onThirdDark
+                                    //                     : textLight,
+                                    //             fontWeight: FontWeight.bold,
+                                    //             fontSize:
+                                    //                 mediaQueryWidth * 0.015,
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                    // Expanded(
+                                    //   child: Row(
+                                    //     children: [
+                                    //       SizedBox(
+                                    //         width: mediaQueryHeight * 0.08,
+                                    //       ),
+                                    //       Expanded(
+                                    //         child: Text(
+                                    //           "   · Authentication",
+                                    //           style: TextStyle(
+                                    //             color:
+                                    //                 global.isDarkMode.value ==
+                                    //                         true
+                                    //                     ? onThirdDark
+                                    //                     : textLight,
+                                    //             fontWeight: FontWeight.bold,
+                                    //             fontSize:
+                                    //                 mediaQueryWidth * 0.015,
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    // Expanded(
+                                    //   child: Row(
+                                    //     children: [
+                                    //       SizedBox(
+                                    //         width: mediaQueryHeight * 0.065,
+                                    //         height: mediaQueryHeight * 0.065,
+                                    //         child: Container(
+                                    //           decoration: BoxDecoration(
+                                    //             borderRadius:
+                                    //                 BorderRadius.circular(20),
+                                    //             border: Border.all(
+                                    //                 color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                    //                 width: 2.5),
+                                    //           ),
+                                    //           child: Padding(
+                                    //             padding: EdgeInsets.all(8.0),
+                                    //             child: Image(
+                                    //               image: AssetImage(
+                                    //                 'images/jsnodelogo.png',
+                                    //               ),
+                                    //             ),
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //       Text(
+                                    //         "  Node.js",
+                                    //         style: TextStyle(
+                                    //           color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                    //           fontWeight: FontWeight.bold,
+                                    //           fontSize: mediaQueryWidth * 0.02,
+                                    //         ),
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                    // Expanded(
+                                    //   child: Row(
+                                    //     children: [
+                                    //       SizedBox(
+                                    //         width: mediaQueryHeight * 0.08,
+                                    //       ),
+                                    //       Text(
+                                    //         "   · Web Server",
+                                    //         style: TextStyle(
+                                    //           overflow: TextOverflow.ellipsis,
+                                    //           color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                    //           fontWeight: FontWeight.bold,
+                                    //           fontSize: mediaQueryWidth * 0.015,
+                                    //         ),
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
                                   ],
                                 ),
                               ),
@@ -426,7 +555,9 @@ class MeView extends GetView {
                             padding: EdgeInsets.all(6.0),
                             child: Container(
                               decoration: BoxDecoration(
-                                color: global.isDarkMode.value == true ? thirdDark :thirdLight,
+                                color: global.isDarkMode.value == true
+                                    ? thirdDark
+                                    : thirdLight,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -437,7 +568,9 @@ class MeView extends GetView {
                                     Text(
                                       "Code",
                                       style: TextStyle(
-                                        color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                        color: global.isDarkMode.value == true
+                                            ? onThirdDark
+                                            : textLight,
                                         fontWeight: FontWeight.bold,
                                         fontSize: mediaQueryWidth * 0.05,
                                       ),
@@ -449,7 +582,9 @@ class MeView extends GetView {
                                       child: Text(
                                         "gitHub />",
                                         style: TextStyle(
-                                          color: global.isDarkMode.value == true ? tertiaryDark :tertiaryLight,
+                                          color: global.isDarkMode.value == true
+                                              ? tertiaryDark
+                                              : tertiaryLight,
                                           fontWeight: FontWeight.bold,
                                           fontSize: mediaQueryWidth * 0.035,
                                         ),
@@ -471,7 +606,9 @@ class MeView extends GetView {
                                 borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(35),
                                 ),
-                                color: global.isDarkMode.value == true ? thirdDark :thirdLight,
+                                color: global.isDarkMode.value == true
+                                    ? thirdDark
+                                    : thirdLight,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -482,7 +619,9 @@ class MeView extends GetView {
                                     Text(
                                       "Blog",
                                       style: TextStyle(
-                                        color: global.isDarkMode.value == true ? onThirdDark :textLight,
+                                        color: global.isDarkMode.value == true
+                                            ? onThirdDark
+                                            : textLight,
                                         fontWeight: FontWeight.bold,
                                         fontSize: mediaQueryWidth * 0.05,
                                       ),
@@ -494,7 +633,9 @@ class MeView extends GetView {
                                       child: Text(
                                         "Velog />",
                                         style: TextStyle(
-                                          color: global.isDarkMode.value == true ? tertiaryDark :tertiaryLight,
+                                          color: global.isDarkMode.value == true
+                                              ? tertiaryDark
+                                              : tertiaryLight,
                                           fontWeight: FontWeight.bold,
                                           fontSize: mediaQueryWidth * 0.035,
                                         ),
@@ -526,7 +667,9 @@ class MeView extends GetView {
                                   bottomLeft: Radius.circular(35),
                                   // topLeft: Radius.circular(25),
                                 ),
-                                color: global.isDarkMode.value == true ? secondDark :secondLight,
+                                color: global.isDarkMode.value == true
+                                    ? tertiaryDark
+                                    : secondLight,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -537,7 +680,9 @@ class MeView extends GetView {
                                     Text(
                                       "Contact",
                                       style: TextStyle(
-                                        color: onPrimary,
+                                        color: global.isDarkMode.value == true
+                                            ? onPrimaryDark
+                                            : onPrimary,
                                         fontWeight: FontWeight.bold,
                                         fontSize: mediaQueryWidth * 0.05,
                                       ),
@@ -548,7 +693,10 @@ class MeView extends GetView {
                                         Text(
                                           "( ) =>",
                                           style: TextStyle(
-                                            color: onPrimary,
+                                            color:
+                                                global.isDarkMode.value == true
+                                                    ? onPrimaryDark
+                                                    : onPrimary,
                                             fontWeight: FontWeight.bold,
                                             fontSize: mediaQueryWidth * 0.04,
                                           ),
@@ -592,7 +740,9 @@ class MeView extends GetView {
                                   child: Text(
                                     "devc143c@gmail.com;",
                                     style: TextStyle(
-                                      color: global.isDarkMode.value == true ? textDark :primaryCrimson,
+                                      color: global.isDarkMode.value == true
+                                          ? textDark
+                                          : primaryCrimson,
                                       // fontWeight: FontWeight.bold,
                                       fontSize: mediaQueryWidth * 0.04,
                                     ),
