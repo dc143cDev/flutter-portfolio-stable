@@ -70,7 +70,7 @@ class ProjectView extends GetView<HomeController> {
                                   onHover: (hm) {
                                     if (hm == true && mediaQueryWidth > 700) {
                                       controller.motomeeFocused.value = true;
-                                      print('object');
+                                      print('objec');
                                     } else {
                                       controller.motomeeFocused.value = false;
                                     }
